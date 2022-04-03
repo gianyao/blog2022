@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Gian">
+
+
+
+
+
+<title>幽默工具箱 | 大安</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Gian&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Gian&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">幽默工具箱</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Gian</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">April 1, 2022&nbsp;&nbsp;16:02:09</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h3 id="1、答非所问"><a href="#1、答非所问" class="headerlink" title="1、答非所问"></a>1、答非所问</h3><p>答非所问，就是我们常说的打岔。在综艺节目里，常常可以看到艺人用这个技巧。提问的人得到的是一个与答案无关的回答，因此产生一种嘀笑皆非的感觉。</p>
+<blockquote>
+<p>台湾综艺节目《我猜我猜我猜猜猜》中，主持人阿雅问吴宗宪：“你跟康康哪个比较搞笑？”吴宗宪回答说：“他比较可笑。”</p>
+</blockquote>
+<p>当然在电视节目中的普通人也会有这样的时刻。</p>
+<blockquote>
+<p>记者：“大爷，大娘给您做了一桌子菜，您感动吗？” </p>
+<p>大爷：“我不敢动啊，每次都是她先动我才敢动。”</p>
+</blockquote>
+<p>在生活中，很多老年人听力不太好，跟他们说话时常会出现答非所问的情况。</p>
+<p>通过以上两个典型的答非所问场景，不难看出，打岔可以营造出一种简单但荒诞有趣的对话环境。提问一方不断被打岔后的无奈、妥协与最后不得不放弃，都是笑点所在。</p>
+<h3 id="2、避重就轻"><a href="#2、避重就轻" class="headerlink" title="2、避重就轻"></a>2、避重就轻</h3><p>避重就轻，就是不顺着对方的话讲，故意曲解前一句话中的重点词语，把重点放到与人们日常理解不一样的词语上，怎么歪怎么来，让人们听到后产生意外感，从而具有幽默的效果。比如：</p>
+<blockquote>
+<p>冬天大雁为什么要飞到南方过冬？因为走过去太远了。</p>
+</blockquote>
+<p>在这句话的前半句中，从正常的角度考虑，问题的重点应该是为什么到南方过冬，关键词是“南方”，但在后半句的回答中，却避开了这个关键词，把答案放到了“飞”这个字上。这就是避重就轻。再举两个例子体会一下：</p>
+<blockquote>
+<p>你：房子又漏雨了！</p>
+<p>房东：就你交的这点房租，难道还想漏香槟吗？</p>
+</blockquote>
+<blockquote>
+<p>你：你的房子这么差，还要求押一付三？</p>
+<p>房东：因为押一付五不合法。</p>
+</blockquote>
+<p>从这几个例子可以看出，避重就轻这个技巧的关键，是把前一个句子中人们习惯了的关键词，换成另一个不常用的关键词，避开原来的重点，针对另一个不重点的关键词来说出后面的答案。日常训练的时候，只要记住不按常理回答就可以了。</p>
+<h3 id="3、重新定义"><a href="#3、重新定义" class="headerlink" title="3、重新定义"></a>3、重新定义</h3><p>就是把人们习惯中已经约定俗成的固定定义，用另外一套逻辑重新解释出来。被重新定义最多的就是成语和俗语。这些成语和俗语，通过另一个逻辑解释出来的时候，一下子冲破了人们对这个词语原有的固定认知，产生出很强的意外感，幽默由此产生。来看个例子：</p>
+<blockquote>
+<p>有一年我们商学院有同学毕业，我们做了个吐槽大会。对其中一位同学的吐槽是：“这是位德艺双馨的艺术家，他得意扬扬的样子就好像是刚刚发了双薪。”</p>
+<p>因为这位同学做设计工作，的确自带傲慢气质，所以，这种调侃一说出来，所有人都笑了。</p>
+</blockquote>
+<p>在这里，“德艺双馨”被重新定义为“得意双薪”，打破了这个词在人们心中的固有形象，以意料之外的解读引发了大家的笑声。</p>
+<blockquote>
+<p>我参加过一个学习，第一名的同学最后会获得学院的一个奖励，就是明星老师的VIP(贵宾)私房课。主持人开玩笑说：“什么是私房课呢？就是到私人的房子里去上课。”</p>
+</blockquote>
+<p>这个例子使用的也是重新定义的技巧。确保重新定义的意思和原来的表达意味处于不同的方向，否则重新定义就失去了意义。</p>
+<h3 id="4、先躺枪再甩锅"><a href="#4、先躺枪再甩锅" class="headerlink" title="4、先躺枪再甩锅"></a>4、先躺枪再甩锅</h3><p>躺枪就是前面你可以正经地批评一件事，义正词严。然后在结尾的地方一拐弯，把锅甩给一个毫无防备的人。举个例子：</p>
+<blockquote>
+<p>何洁曾经放狠话，说她要是瘦不下来就退出娱乐圈，我说你不要这样，你在娱乐圈进进出出不太好，这个娱乐圈的通道就这么窄，就因为你，苏醒现在都没进去。</p>
+</blockquote>
+<p>再举个例子：</p>
+<blockquote>
+<p>创始人一出事就会导致公司市值掉几百亿，这提醒我们企业做大做强之后，企业家本身的自我约束力也得提升，否则很容易对企业造成巨大的损失。你说是吧，孙总？</p>
+</blockquote>
+<p>记住这个躺枪的经典句型——“你说是吧？”。</p>
+<h3 id="5、声东击西"><a href="#5、声东击西" class="headerlink" title="5、声东击西"></a>5、声东击西</h3><p>声东击西，就是前面说一件事，后面说另一件事。也就是在说的过程中，打断已有的强逻辑关联，冒出一个弱逻辑关联。比如，在饭店就餐时，有人这样点菜：</p>
+<blockquote>
+<p>这个葱爆羊肉看起来真好吃，这个红烧鱼也不错，这个小鸡炖蘑菇挺诱人，我们点一个水晶肘子吧。</p>
+</blockquote>
+<p>声东击西的两件事之间，是有一定联系的。在这儿例子中，虽然没点葱爆羊肉、红烧鱼、小鸡炖蘑菇，但是水晶肘子还是属于菜品的。如果在同样的情景下，点菜的人说：“这个葱爆羊肉看起来真不错，卫生间在哪？”就会因为上下过于不衔接而给人莫名其妙的感觉。</p>
+<h3 id="6、谐音梗"><a href="#6、谐音梗" class="headerlink" title="6、谐音梗"></a>6、谐音梗</h3><p>谐音梗属于入门级别的技巧，简单易懂。</p>
+<p>谐音梗用于故意制造误会，继而产生出幽默的效果。误会是喜剧中一个很常用的套路，无论是在相声中，还是网上的段子中，如果是误会套路的，很多都是用谐音梗创作出来而。举个例子：</p>
+<blockquote>
+<p>一天店里新来了个女服务员，店领导一到店里就说：“人呢？茶！”服务员赶紧数：“1、2、3、4、5、6、7，报告领导，7个人。”领导怒了，说：“茶！！”服务员再数：“7、6、5、5、4、3、2、1，还是7个，领导。”领导很无奈地说：“你数啥！”服务员回答：“我属狗”。</p>
+</blockquote>
+<p>再比如：</p>
+<blockquote>
+<p>A：王菲是不是暗恋哪吒呀？</p>
+<p>B：为什么这么说？</p>
+<p>A：因为常听她唱：想你时你在闹海…</p>
+</blockquote>
+<p>还有，前面“答非所问”中提到的“感动”和“敢不敢动”中的“敢动”也是一个谐音梗。</p>
+<h3 id="7、用暗示留白"><a href="#7、用暗示留白" class="headerlink" title="7、用暗示留白"></a>7、用暗示留白</h3><p>笑点这个东西，从来都不是单方面的，当一句幽默的话从你嘴里说出来，要等听众经过大脑反应之后，才会表现出好笑或者不好笑的状态。正因为如此，有些笑点不需要直接表述出来，可以利用暗示，给观众留下想象的余地。这种留白打造的含蓄笑点，总是能够令人会心一笑。</p>
+<blockquote>
+<p>几个朋友聚会，聊到关于自己最讨厌的人或事，其中一个朋友开玩笑说：“我最讨厌比我还帅的人。”另一位补刀问他：“那我们这群人不都是你讨厌的对象？”</p>
+</blockquote>
+<p>这句话没有直接表达“我们都比你帅”这个意思，但通过信息的留白，大家都能很迅速地明白这句话的真实意思。</p>
+<p>我给大家一个联系，可以采用说A说C不说B的方式进行训练。A是前提，C是结果，B是中间过程，省略中间环节，直接从前提跳到结果。也就是说，将中间内容留给听众去自我分析，让大家自己找到笑点。</p>
+<h3 id="8、三段式"><a href="#8、三段式" class="headerlink" title="8、三段式"></a>8、三段式</h3><p>三段式是我个人最喜欢的一个技巧</p>
+<p>所谓三段式，就是在你的段子中有一组东西，我们暂且称它们为A、B、C，其中A和B属于同一类，这样可以让观众形成一个预期，然后你给一个不同类的C，观众就会因为意外而发笑。</p>
+<p>国外有一个经典的三段式笑话：</p>
+<blockquote>
+<p>空姐在头等舱分发饮料。她问一个很有魅力的男乘客：“您是要咖啡、茶、还是我？”</p>
+</blockquote>
+<p>我们平时经常说有的人说话一套一套的，其实很多就是三段式的变形。比如，小米科技集团联合创始人刘德是个挺幽默的人，在谈到小米生态链的时候，他曾经说过这样一段话：</p>
+<blockquote>
+<p>我们很尊重创业者，尽量满足他们的需求。他们说要400万，我们就给400万，他们说要800万，我们就给800万，他们说要2000万，我们就说：“哥们儿，我们算了下，你需要800万。”</p>
+</blockquote>
+<p>三段式的特点在于，经过一层一层的铺垫，可以激发听众的好奇心，让他们对最终的结果产生期待。同时，也可以通过前面两段的叙述，让听众对故事的结果形成一定的预期，然后我们再用第三段打破预期。</p>
+<p>如果没有前面两段的铺垫，你只讲“创业者要2000万，但我们认为他只需要800万”，并不能达到引人发笑的目的。在很多喜剧作品中，也非常强调包袱的铺平垫稳，前面铺垫得越扎实，最后的包袱越响。</p>
+<p>在学习使用逻辑性三段式叙述方法的时候，我们可以通过时间拆分的方式进行训练，将事件的经过分成A、B、C三个阶段。先用A、B形成预期，然后用C来打破预期。在进行A、B阶段的叙述时，要注意描述的吸引力，如果在铺垫阶段没有抓住听者的注意力，那么段子的效果肯定会大打折扣。</p>
+<p>三段式可以跟其他技巧叠加使用，比如下面这个“三段式+谐音梗”的例子：</p>
+<blockquote>
+<p>这玩意儿别头上就是头花，别领子上就是领花别腰上就是腰花。</p>
+</blockquote>
+<h3 id="9、头韵和尾韵"><a href="#9、头韵和尾韵" class="headerlink" title="9、头韵和尾韵"></a>9、头韵和尾韵</h3><p>头韵和尾韵是押韵的一种，指的是在铺垫中找一个词，在包袱中使用与这个词当中的一个字相同的一个词。</p>
+<p>最常见的是压尾韵，比如：</p>
+<blockquote>
+<p>人生没有如果，只要后果和结果。</p>
+</blockquote>
+<p>铺垫中是“如果”，包袱中用了“后果”和“结果”的尾韵。</p>
+<p>头韵就是铺垫中的连接词和包袱中的笑点词首字相同。</p>
+<blockquote>
+<p>那个让你心动的人，结婚后可能会让你心梗。</p>
+</blockquote>
+<blockquote>
+<p>我们是处对象，又不是处钱。</p>
+</blockquote>
+<p>使用头韵和尾韵，因为前后的押韵和对比，平添了语言的不少趣味性，显得短小俏皮，是非常实用的一个幽默技巧。</p>
+<h3 id="10、词语叠用"><a href="#10、词语叠用" class="headerlink" title="10、词语叠用"></a>10、词语叠用</h3><p>中国汉字的魅力在于，同样的字在不同的情景下，代表的意思也不尽相同。尤其在一句话里，高密度重复使用同一个词，总是会让人听得晕头转向，进而被这种絮絮叨叨的描述和自己产生的困扰逗笑。</p>
+<blockquote>
+<p>亲密关系有四种：你懂他他也懂你，你懂他他不懂你，你不懂他他懂你，你不懂他他也不懂你。</p>
+</blockquote>
+<p>在这句话中，“你”“懂”“他”这三个关键词在不断地重复和叠用，在不仔细深究的情况下，很难一下子明白其中的含义。这种词语叠用的描述方式，如果以书面化的形式展示，不足以表现它的笑点；相反，若搭配语速较快的口语表达，则能展示它的幽默效果。类似的还有：</p>
+<blockquote>
+<p>外国学生做汉语考试试题。题面是：小王想给自己媳妇调动工作，于是拿出红包塞给领导，说：“这是我的一点意思”。领导说：“你这是什么意思？”小王说：“我就想意思意思。”领导说：“你这样做就没意思了。”题目问：这里的意思都是什么意思？</p>
+</blockquote>
+<p>看到这样的题目，我对外国朋友产生了深深的同情。</p>
+<p>词语叠用还可以有一种升级版，就是把关键词略微做一下变形，让人感觉更好笑。因为这种升级版更绕，更烧脑，需要听众更专注，所以如果最后听众能跟上节奏和思路，会更有成就感，更开心。</p>
+<blockquote>
+<p>今晚是神曲专场。神曲有三种，一种像《凤凰传奇》，你能听懂也会唱；一种像《新贵妃醉酒》，你能听懂不一定会唱；还有一种像《忐忑》，你听不懂也不会唱。</p>
+</blockquote>
+<p>在现实生活中我们常常使用词语叠用这个技巧，只不过之前并不知道这是个技巧。比如：</p>
+<blockquote>
+<p>我家的狗名叫溜溜，每次我下楼遛狗碰到邻居,他们都对我说:”老铁,溜溜溜啊!”</p>
+</blockquote>
+<p>相信现在你明白怎么做词语叠用了.如果你想更好地掌握这个技巧,我给你一个小练习叫”我知道”。两个人为一组，甲说“我知道”，乙说”我知道你知道”，然后甲再说“我知道你知道我知道”，以此类推，直到一人说不下去为止。说的时候要动脑，看自己的脑袋转得有没有嘴巴快。</p>
+<h3 id="11、化用典故"><a href="#11、化用典故" class="headerlink" title="11、化用典故"></a>11、化用典故</h3><p>典故，包括诗词、歇后语、俗语、名言等，指的是人人皆知的名句。化用典故就是稍微改动一下典故，把一个常规的俗语变“歪”，让典故带上幽默色彩。比如：</p>
+<blockquote>
+<p>善有善报，恶有恶报，不是不报，是你这个发票有点问题。</p>
+</blockquote>
+<blockquote>
+<p>水能载舟，亦能煮粥。</p>
+</blockquote>
+<blockquote>
+<p>是金子总会发光，是镜子总会反光。</p>
+</blockquote>
+<p>这些段子一般采用典故的前半句形成常规的期待，然后改写后半段，以出其不意的“歪理”来破坏听众的预期走向，从而形成笑点。因为典故深入人心，稍微改动一点点就会变得出人意料，带来好笑的效果。化用的典故一般语言仍然工整对仗，笑点和铺垫押韵，朗朗上口。</p>
+<h3 id="12、词语拆分"><a href="#12、词语拆分" class="headerlink" title="12、词语拆分"></a>12、词语拆分</h3><p>有些词语固定搭配在一起的时候是一个意思，拆成单独的字又是另外一个意思。词语拆分的技巧，就是用词语首先形成一个有效的预期，然后把这个词语拆成一个个单独的字来进行细化描述，打破原有的预期，从而形成笑点。</p>
+<blockquote>
+<p>我们工作要100%投入，周一投入20%，周二投入20%，周三投入20%，周四投入20%，周五投入20%。</p>
+</blockquote>
+<p>这句话的原意是鼓励大家工作要投入全部的精力。但经过以时间为线索的词语拆分，每天的100%，就成了5天的每天20%，用这种完全曲解原有意思的方法引发人的笑点。</p>
+<blockquote>
+<p>有一次，美国舞蹈家邓肯和爱因斯坦碰面了。</p>
+<p>邓肯对爱因斯坦说：“如果我们结合会生一个最棒的孩子，我的身材，你的大脑。”</p>
+<p>爱因斯坦幽默地回答说：“未必吧，万一反过来怎么办？”</p>
+</blockquote>
+<p>从某种程度来说，这个段子也可以算作拆分的一种，把人类个体拆分成了身体和大脑，然后通过打乱组合，将原本最美好的组合变为最不合理的组合，从而产生矛盾，制造出笑点。</p>
+<p>词语拆分的技巧赋予了词语新的解释和含义，使人产生耳目一新的感觉。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Gian</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://860418.xyz/2022/04/01/humorous/">http://860418.xyz/2022/04/01/humorous/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E5%B9%BD%E9%BB%98/"># 幽默</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2022/04/03/hello-world/">Hello World</a>
+            
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Gian | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
