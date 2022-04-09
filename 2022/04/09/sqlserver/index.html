@@ -219,7 +219,11 @@
 <li>使用sys.database_files查看有关数据库文件的信息。</li>
 <li>使用sys.filegroups查看有关数据库组的信息。</li>
 <li>使用sys.master_files查看数据库文件的基本信息和状态信息。</li>
-<li>使用sys.databases数据库和文件目录视图查看有关数据库的基本信息。<h2 id="2-使用函数"><a href="#2-使用函数" class="headerlink" title="2. 使用函数"></a>2. 使用函数</h2>如果要查看指定数据库中的指定选项信息时，可以使用DATABASEPROPERTYEX()函数，该函数每次只返回一个选项的信息。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">USE test</span><br><span class="line">  GO</span><br><span class="line">  SELECT DATABASEPROPERTYEX(‘test’, ‘Status’)</span><br><span class="line">  AS ‘test数据库状态’</span><br></pre></td></tr></table></figure>
+<li>使用sys.databases数据库和文件目录视图查看有关数据库的基本信息。</li>
+</ul>
+<h2 id="2-使用函数"><a href="#2-使用函数" class="headerlink" title="2. 使用函数"></a>2. 使用函数</h2><p>如果要查看指定数据库中的指定选项信息时，可以使用DATABASEPROPERTYEX()函数，该函数每次只返回一个选项的信息。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">USE test</span><br><span class="line">  GO</span><br><span class="line">  SELECT DATABASEPROPERTYEX(‘test’, ‘Status’)</span><br><span class="line">  AS ‘test数据库状态’</span><br></pre></td></tr></table></figure>
+
 <h3 id="DATABASEPROPERTYEX可用属性值"><a href="#DATABASEPROPERTYEX可用属性值" class="headerlink" title="DATABASEPROPERTYEX可用属性值"></a>DATABASEPROPERTYEX可用属性值</h3><table>
 <thead>
 <tr>
@@ -288,7 +292,8 @@
 <td>如果安装了复制，则可以发布数据库表供合并复制</td>
 </tr>
 </tbody></table>
-<h2 id="3-使用系统存储过程"><a href="#3-使用系统存储过程" class="headerlink" title="3. 使用系统存储过程"></a>3. 使用系统存储过程</h2>除了上述的目录视图和函数外，</li>
+<h2 id="3-使用系统存储过程"><a href="#3-使用系统存储过程" class="headerlink" title="3. 使用系统存储过程"></a>3. 使用系统存储过程</h2><p>除了上述的目录视图和函数外，</p>
+<ul>
 <li>还可以使用存储过程sp_spaceused显示数据库使用和保留的空间。</li>
 <li>sp_helpdb存储过程查看所有数据库的基本信息。</li>
 </ul>
