@@ -13,7 +13,7 @@
 
 
 
-<title>查看数据库信息 | 大安</title>
+<title>Hello World | 大安</title>
 
 
 
@@ -197,7 +197,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">查看数据库信息</h1>
+            <h1 class="post-title">Hello World</h1>
             
                 <div class="post-meta">
                     
@@ -206,105 +206,20 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">April 9, 2022&nbsp;&nbsp;17:27:50</a>
+                        Date: <a href="#">April 10, 2022&nbsp;&nbsp;13:06:57</a>
                         </span>
                     
-                    
-                        <span class="post-category">
-                    Category:
-                            
-                                <a href="/categories/SQL/">SQL</a>
-                            
-                        </span>
                     
                 </div>
             
         </header>
 
         <div class="post-content">
-            <h1 id="查看数据库信息"><a href="#查看数据库信息" class="headerlink" title="查看数据库信息"></a>查看数据库信息</h1><h2 id="1-使用目录视图"><a href="#1-使用目录视图" class="headerlink" title="1. 使用目录视图"></a>1. 使用目录视图</h2><ul>
-<li>使用sys.database_files查看有关数据库文件的信息。</li>
-<li>使用sys.filegroups查看有关数据库组的信息。</li>
-<li>使用sys.master_files查看数据库文件的基本信息和状态信息。</li>
-<li>使用sys.databases数据库和文件目录视图查看有关数据库的基本信息。</li>
+            <h1 id="Lambda概述"><a href="#Lambda概述" class="headerlink" title="Lambda概述"></a>Lambda概述</h1><ul>
+<li>Lambda表达式是JDK 8开始后的一种新语法形式</li>
+<li>作用：简化匿名内部类的代码写法。</li>
 </ul>
-<h2 id="2-使用函数"><a href="#2-使用函数" class="headerlink" title="2. 使用函数"></a>2. 使用函数</h2><p>如果要查看指定数据库中的指定选项信息时，可以使用DATABASEPROPERTYEX()函数，该函数每次只返回一个选项的信息。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">USE test</span><br><span class="line">  GO</span><br><span class="line">  SELECT DATABASEPROPERTYEX(‘test’, ‘Status’)</span><br><span class="line">  AS ‘test数据库状态’</span><br></pre></td></tr></table></figure>
-
-<h3 id="DATABASEPROPERTYEX可用属性值"><a href="#DATABASEPROPERTYEX可用属性值" class="headerlink" title="DATABASEPROPERTYEX可用属性值"></a>DATABASEPROPERTYEX可用属性值</h3><table>
-<thead>
-<tr>
-<th>属性</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Collation</td>
-<td>数据库的默认排序规则名称</td>
-</tr>
-<tr>
-<td>ComparisonStyle</td>
-<td>排序规则的Windows比较样式</td>
-</tr>
-<tr>
-<td>IsAnsiNullDefault</td>
-<td>数据库遵循ISO规则，允许Null值</td>
-</tr>
-<tr>
-<td>IsAnsiNullsEnabled</td>
-<td>所有与Null的比较将取值为未知</td>
-</tr>
-<tr>
-<td>IsAnsiPaddingEnabled</td>
-<td>在比较或插入前，字符串将被填充到相同长度</td>
-</tr>
-<tr>
-<td>IsAnsiWarningsEnabled</td>
-<td>如果发生了标准错误条件，则将发出错误消息或警告消息</td>
-</tr>
-<tr>
-<td>IsArithmeticAbortEnabled</td>
-<td>如果执行查询时发生溢出或被零除错误，则将结束查询</td>
-</tr>
-<tr>
-<td>IsAutoClose</td>
-<td>数据库在最后一位用户退出后完全关闭并释放资源</td>
-</tr>
-<tr>
-<td>IsAutoCreatestatistics</td>
-<td>在查询优化期间自动生成优化查询所需的缺失统计信息</td>
-</tr>
-<tr>
-<td>IsAutoShrink</td>
-<td>数据库文件可以自动定期收缩</td>
-</tr>
-<tr>
-<td>IsAutoUpdatestatistics</td>
-<td>如果表中数据更改造成统计信息过期，则自动更新现有统计信息</td>
-</tr>
-<tr>
-<td>IsCloseCursorsOnCommitEnabled</td>
-<td>提交事务时打开的游标已关闭期，则自动更新现有统计信息</td>
-</tr>
-<tr>
-<td>IsInStandBy</td>
-<td>数据库以只读方式联机，并允许还原日志</td>
-</tr>
-<tr>
-<td>IsLocalCursorsDefault</td>
-<td>游标声明默认为 LOCAL</td>
-</tr>
-<tr>
-<td>IsMergePublished</td>
-<td>如果安装了复制，则可以发布数据库表供合并复制</td>
-</tr>
-</tbody></table>
-<h2 id="3-使用系统存储过程"><a href="#3-使用系统存储过程" class="headerlink" title="3. 使用系统存储过程"></a>3. 使用系统存储过程</h2><p>除了上述的目录视图和函数外，</p>
-<ul>
-<li>还可以使用存储过程sp_spaceused显示数据库使用和保留的空间。</li>
-<li>sp_helpdb存储过程查看所有数据库的基本信息。</li>
-</ul>
-<h3 id="作业："><a href="#作业：" class="headerlink" title="作业："></a>作业：</h3><p>使用T-SQL语句创建名称为newDB的新数据库，数据库的参数如<br>下。<br>●  逻辑数据文件名：newDBdata。<br>●  操作系统数据文件名：D:\newDBdata.mdf。<br>●  数据文件的初始大小：2MB。<br>●  数据文件的最大大小：20MB。<br>●  数据文件增长幅度：10%。<br>●  日志逻辑文件名：newDBlog。<br>●  操作系统日志文件名：D:\newDBlog.ldf。<br>●  日志文件初始大小：1MB。<br>●  日志文件增长幅度：5%。</p>
+<h2 id="Lambda表达式的简化格式"><a href="#Lambda表达式的简化格式" class="headerlink" title="Lambda表达式的简化格式"></a>Lambda表达式的简化格式</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">（匿名内部类被重写方法的形参列表）-&gt; &#123;</span><br><span class="line">    被重写方法的方法体代码。</span><br><span class="line">&#125;</span><br><span class="line">注： -&gt; 是语法形式，无实际含义</span><br></pre></td></tr></table></figure>
 
         </div>
 
@@ -319,7 +234,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://860418.xyz/2022/04/09/sqlserver/">http://860418.xyz/2022/04/09/sqlserver/</a></span>
+                        <span><a href="http://860418.xyz/2022/04/10/lambda/">http://860418.xyz/2022/04/10/lambda/</a></span>
                     </p>
                 
                 
@@ -342,10 +257,6 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
-                    
-                        <a href="/tags/SQL/"># SQL</a>
-                    
-                        
                 </span>
             </div>
             <div>
@@ -356,10 +267,10 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2022/04/10/Date/"></a>
+                <a class="prev" rel="prev" href="/2022/04/11/day01/">day01 - java基础语法</a>
             
             
-            <a class="next" rel="next" href="/2022/04/03/hello-world/">Hello World</a>
+            <a class="next" rel="next" href="/2022/04/10/Date/"></a>
             
         </section>
 

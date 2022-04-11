@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Gian">
+
+
+
+
+
+<title>ATM系统开发 | 大安</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Gian&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/talk">Talk</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Gian&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/talk">Talk</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">ATM系统开发</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Gian</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">April 11, 2022&nbsp;&nbsp;19:42:30</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h1 id="ATM系统开发前说明"><a href="#ATM系统开发前说明" class="headerlink" title="ATM系统开发前说明"></a>ATM系统开发前说明</h1><h2 id="项目演示环节"><a href="#项目演示环节" class="headerlink" title="项目演示环节"></a>项目演示环节</h2><p><img src="/day09-ATM%E7%B3%BB%E7%BB%9F.assets%5Cimage-20210923104405096.png" alt="image-20210923104405096"></p>
+<p>建议读者先把项目代码执行起来，玩一下每个功能，再观看本文档，这样思路会非常清晰</p>
+<p><img src="/day09-ATM%E7%B3%BB%E7%BB%9F.assets%5Cimage-20210923104328980.png" alt="image-20210923104328980"></p>
+<h2 id="项目技术选型"><a href="#项目技术选型" class="headerlink" title="项目技术选型"></a>项目技术选型</h2><p><img src="/day09-ATM%E7%B3%BB%E7%BB%9F.assets%5Cimage-20210923103611908.png" alt="image-20210923103611908"></p>
+<h2 id="项目收获"><a href="#项目收获" class="headerlink" title="项目收获"></a>项目收获</h2><p><img src="/day09-ATM%E7%B3%BB%E7%BB%9F.assets%5Cimage-20210923104547010.png" alt="image-20210923104547010"></p>
+<h1 id="ATM系统功能实战"><a href="#ATM系统功能实战" class="headerlink" title="ATM系统功能实战"></a>ATM系统功能实战</h1><h2 id="系统准备、首页设计"><a href="#系统准备、首页设计" class="headerlink" title="系统准备、首页设计"></a>系统准备、首页设计</h2><p><strong>系统准备内容分析：</strong></p>
+<p>①每个用户的账户信息都是一个对象，需要提供账户类。</p>
+<p>②需要准备一个容器，用于存储系统全部账户对象信息。</p>
+<p>③首页只需要包含：登录和注册2个功能。</p>
+<p><img src="/day09-ATM%E7%B3%BB%E7%BB%9F.assets%5Cimage-20210923104802104.png" alt="image-20210923104802104"></p>
+<p><strong>实现步骤：</strong></p>
+<p>①定义账户类，用于后期创建账户对象封装用户的账户信息。</p>
+<p>②账户类中的信息至少需要包含（卡号、姓名、密码、余额、取现额度）</p>
+<p>③需要准备一个ArrayList的集合，用于存储系统用户的账户对象。</p>
+<p>④定义一个系统启动类ATMSystem需要展示欢迎页包含2个功能：开户功能、登录账户。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Account</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String cardId;  <span class="comment">// 卡号</span></span><br><span class="line">    <span class="keyword">private</span> String userName;  <span class="comment">// 客户名称</span></span><br><span class="line">    <span class="keyword">private</span> String passWord;  <span class="comment">// 密码</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">double</span> money;  <span class="comment">// 余额</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">double</span> quotaMoney;  <span class="comment">// 当次取现限额</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Account</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Account</span><span class="params">(String cardId, String userName, String passWord, <span class="type">double</span> quotaMoney)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.cardId = cardId;</span><br><span class="line">        <span class="built_in">this</span>.userName = userName;</span><br><span class="line">        <span class="built_in">this</span>.passWord = passWord;</span><br><span class="line">        <span class="built_in">this</span>.quotaMoney = quotaMoney;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getCardId</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> cardId;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setCardId</span><span class="params">(String cardId)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.cardId = cardId;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getUserName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> userName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setUserName</span><span class="params">(String userName)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.userName = userName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getPassWord</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> passWord;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setPassWord</span><span class="params">(String passWord)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.passWord = passWord;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">getMoney</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> money;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setMoney</span><span class="params">(<span class="type">double</span> money)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.money = money;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">getQuotaMoney</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> quotaMoney;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setQuotaMoney</span><span class="params">(<span class="type">double</span> quotaMoney)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.quotaMoney = quotaMoney;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ATMSystem</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 1、准备系统需要的容器对象，用于存储账户对象</span></span><br><span class="line">        ArrayList&lt;Account&gt; accounts = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2、准备系统的首页：登录 开户</span></span><br><span class="line">        showMain(accounts);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">showMain</span><span class="params">(ArrayList&lt;Account&gt; accounts)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;=============欢迎进入首页=================&quot;</span>);</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;请您输入您想做的操作：&quot;</span>);</span><br><span class="line">            System.out.println(<span class="string">&quot;1、登录&quot;</span>);</span><br><span class="line">            System.out.println(<span class="string">&quot;2、开户&quot;</span>);</span><br><span class="line">            System.out.print(<span class="string">&quot;您可以输入命令了：&quot;</span>);</span><br><span class="line">            <span class="type">int</span> <span class="variable">command</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">            <span class="keyword">switch</span> (command) &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                    <span class="comment">// 登录</span></span><br><span class="line">                    login(accounts, sc);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                    <span class="comment">// 开户</span></span><br><span class="line">                    register(accounts, sc);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">default</span>:</span><br><span class="line">                    System.out.println(<span class="string">&quot;您当前输入的操作命令不被支持！&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="用户开户功能实现"><a href="#用户开户功能实现" class="headerlink" title="用户开户功能实现"></a>用户开户功能实现</h2><p>l开户功能其实就是就是往系统的集合容器中存入一个新的账户对象的信息。</p>
+<p><img src="/day09-ATM%E7%B3%BB%E7%BB%9F.assets%5Cimage-20210923105020165.png" alt="image-20210923105020165"></p>
+<p><strong>开户功能实现步骤</strong></p>
+<p>①定义方法完成开户：<img src="/day09-ATM%E7%B3%BB%E7%BB%9F.assets%5Cimage-20210923105039612.png" alt="image-20210923105039612"></p>
+<p>②键盘录入姓名、密码、确认密码（需保证两次密码一致）</p>
+<p>③生成账户卡号，卡号必须由系统自动生成8位数字（必须保证卡号的唯一）</p>
+<p>④创建Account账户类对象用于封装账户信息（姓名、密码、卡号）</p>
+<p>⑤把Account账户类对象存入到集合accounts中去。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 用户开户功能</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> accounts 账户的集合对象</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">register</span><span class="params">(ArrayList&lt;Account&gt; accounts, Scanner sc)</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;===============用户开户功能==============&quot;</span>);</span><br><span class="line">    <span class="comment">// 2、键盘录入 姓名 密码 确认密码</span></span><br><span class="line">    System.out.println(<span class="string">&quot;请您输入开户名称：&quot;</span>);</span><br><span class="line">    <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> sc.next();</span><br><span class="line"></span><br><span class="line">    <span class="type">String</span> <span class="variable">password</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;请您输入开户密码：&quot;</span>);</span><br><span class="line">        password = sc.next();</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;请您输入确认密码：&quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">okPassword</span> <span class="operator">=</span> sc.next();</span><br><span class="line">        <span class="comment">// 判断两次输入的密码是否一致</span></span><br><span class="line">        <span class="keyword">if</span>(okPassword.equals(password))&#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;两次密码必须一致~~~&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">&quot;请您输入当次限额：&quot;</span>);</span><br><span class="line">    <span class="type">double</span> <span class="variable">quotaMoney</span> <span class="operator">=</span> sc.nextDouble();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3、生成账户的卡号，卡号是8位，而且不能与其他账户卡号重复。</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">cardId</span> <span class="operator">=</span> createCardId(accounts);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 4、创建一个账户对象封装账户的信息</span></span><br><span class="line">    <span class="comment">//   public Account(String cardId, String userName, String passWord, double money, double quotaMoney)</span></span><br><span class="line">    <span class="type">Account</span> <span class="variable">account</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Account</span>(cardId, name, password,quotaMoney);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 5、把账户对象添加到集合中去</span></span><br><span class="line">    accounts.add(account);</span><br><span class="line">    System.out.println(<span class="string">&quot;恭喜您，您开户成功，您的卡号是：&quot;</span> + account.getCardId() +<span class="string">&quot;。请您妥善保管&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">createCardId</span><span class="params">(ArrayList&lt;Account&gt; accounts)</span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">        <span class="comment">// 生成8位随机的数字代表卡号</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">cardId</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="type">Random</span> <span class="variable">r</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Random</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">8</span>; i++) &#123;</span><br><span class="line">            cardId += r.nextInt(<span class="number">10</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 判断卡号是否重复了</span></span><br><span class="line">        <span class="type">Account</span> <span class="variable">acc</span> <span class="operator">=</span> getAccountByCardId(cardId, accounts);</span><br><span class="line">        <span class="keyword">if</span>(acc == <span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="comment">// 说明当前卡号没有重复</span></span><br><span class="line">            <span class="keyword">return</span> cardId;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Account <span class="title function_">getAccountByCardId</span><span class="params">(String cardId , ArrayList&lt;Account&gt; accounts)</span>&#123;</span><br><span class="line">    <span class="comment">// 根据卡号查询账户对象</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; accounts.size(); i++) &#123;</span><br><span class="line">        <span class="type">Account</span> <span class="variable">acc</span> <span class="operator">=</span> accounts.get(i);</span><br><span class="line">        <span class="keyword">if</span>(acc.getCardId().equals(cardId))&#123;</span><br><span class="line">            <span class="keyword">return</span> acc;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">null</span>; <span class="comment">// 查无此账户，说明卡号没有重复了！</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="用户登录功能实现"><a href="#用户登录功能实现" class="headerlink" title="用户登录功能实现"></a>用户登录功能实现</h2><p><img src="/day09-ATM%E7%B3%BB%E7%BB%9F.assets%5Cimage-20210923105423189.png" alt="image-20210923105423189"></p>
+<p><strong>分析</strong></p>
+<p>①定义方法：<img src="/day09-ATM%E7%B3%BB%E7%BB%9F.assets%5Cimage-20210923105442379.png" alt="image-20210923105442379"></p>
+<p>②让用户键盘录入卡号，根据卡号查询账户对象。</p>
+<p>③如果没有找到了账户对象，说明卡号不存在，提示继续输入卡号。</p>
+<p>④如果找到了账户对象，说明卡号存在，继续输入密码。</p>
+<p>⑤如果密码不正确，提示继续输入密码</p>
+<p>⑥如果密码正确，提示登陆成功！！</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 完成用户登录</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> accounts</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">login</span><span class="params">(ArrayList&lt;Account&gt; accounts, Scanner sc)</span> &#123;</span><br><span class="line">    <span class="comment">// 必须系统中存在账户才可以登录</span></span><br><span class="line">    <span class="keyword">if</span>(accounts.size() == <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="comment">// 没有任何账户</span></span><br><span class="line">        System.out.println(<span class="string">&quot;当前系统中无任何账户，您需要先注册！&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>; <span class="comment">// 直接结束方法的执行！</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2、让用户键盘录入卡号，</span></span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;请您输入登录的卡号：&quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">cardId</span> <span class="operator">=</span> sc.next();</span><br><span class="line">        <span class="comment">// 根据卡号查询账户对象。</span></span><br><span class="line">        <span class="type">Account</span> <span class="variable">acc</span> <span class="operator">=</span> getAccountByCardId(cardId , accounts);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3、判断账户对象是否存在，存在说明卡号没问题</span></span><br><span class="line">        <span class="keyword">if</span>(acc != <span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">                <span class="comment">// 4、让用户继续输入密码</span></span><br><span class="line">                System.out.println(<span class="string">&quot;请您输入登录的密码：&quot;</span>);</span><br><span class="line">                <span class="type">String</span> <span class="variable">password</span> <span class="operator">=</span> sc.next();</span><br><span class="line">                <span class="comment">// 5、判断密码是否正确</span></span><br><span class="line">                <span class="keyword">if</span>(acc.getPassWord().equals(password))&#123;</span><br><span class="line">                    <span class="comment">// 密码正确，登录成功</span></span><br><span class="line">                    <span class="comment">// 展示系统登录后的操作界面（下节课继续完成的功能！！）</span></span><br><span class="line">                    System.out.println(<span class="string">&quot;恭喜您，&quot;</span> + acc.getUserName() +<span class="string">&quot;先生/女士成功进入系统，您的卡号是：&quot;</span> + acc.getCardId());</span><br><span class="line">                    <span class="comment">// 展示操作页面</span></span><br><span class="line">                    showUserCommand(sc, acc , accounts);</span><br><span class="line">                    <span class="keyword">return</span>; <span class="comment">// 继续结束登录方法</span></span><br><span class="line">                &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                    System.out.println(<span class="string">&quot;您的密码有误，请确认！&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;对不起，不存在该卡号的账户！&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="用户操作页设计、查询账户、退出账户功能实现"><a href="#用户操作页设计、查询账户、退出账户功能实现" class="headerlink" title="用户操作页设计、查询账户、退出账户功能实现"></a>用户操作页设计、查询账户、退出账户功能实现</h2><p><img src="/day09-ATM%E7%B3%BB%E7%BB%9F.assets%5Cimage-20210923105833499.png" alt="image-20210923105833499"></p>
+<p>①用户登录成功后，需要进入用户操作页，退出账户是需要回到首页的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">showUserCommand</span><span class="params">(Scanner sc, Account acc , ArrayList&lt;Account&gt; accounts)</span> &#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;==================用户操作界面===================&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;1、查询账户&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;2、存款&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;3、取款&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;4、转账&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;5、修改密码&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;6、退出&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;7、注销账户&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;请您输入操作命令：&quot;</span>);</span><br><span class="line">        <span class="type">int</span> <span class="variable">command</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">        <span class="keyword">switch</span> (command) &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                    <span class="comment">// 查询账户</span></span><br><span class="line">                    showAccount(acc);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                    <span class="comment">// 存款</span></span><br><span class="line">                    depositMoney(acc, sc);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">                    <span class="comment">// 取款</span></span><br><span class="line">                    drawMoney(acc,sc);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">                    <span class="comment">// 转账</span></span><br><span class="line">                    transferMoney(accounts, acc , sc);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">                    <span class="comment">// 修改密码</span></span><br><span class="line">                    updatePassWord(acc,sc);</span><br><span class="line">                    <span class="keyword">return</span>; <span class="comment">// 结束当前操作的方法</span></span><br><span class="line">                <span class="keyword">case</span> <span class="number">6</span>:</span><br><span class="line">                    <span class="comment">// 退出</span></span><br><span class="line">                    System.out.println(<span class="string">&quot;欢迎下次光临！！&quot;</span>);</span><br><span class="line">                    <span class="keyword">return</span>; <span class="comment">// 结束当前操作的方法！</span></span><br><span class="line">                <span class="keyword">case</span> <span class="number">7</span>:</span><br><span class="line">                    <span class="comment">// 注销账户</span></span><br><span class="line">                    <span class="comment">// 从当前集合中抹掉当前账户对象即可</span></span><br><span class="line">                    accounts.remove(acc);</span><br><span class="line">                    System.out.println(<span class="string">&quot;销户成功了！！&quot;</span>);</span><br><span class="line">                    <span class="keyword">return</span>;<span class="comment">// 结束当前操作的方法！</span></span><br><span class="line">                <span class="keyword">default</span>:</span><br><span class="line">                    System.out.println(<span class="string">&quot;您的命令输入有误~~~&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>②查询就是直接展示当前登录成功的账户对象的信息。</p>
+<p><img src="/day09-ATM%E7%B3%BB%E7%BB%9F.assets%5Cimage-20210923105851311.png" alt="image-20210923105851311"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">showAccount</span><span class="params">(Account acc)</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;==================当前账户详情===================&quot;</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot;卡号：&quot;</span> + acc.getCardId());</span><br><span class="line">    System.out.println(<span class="string">&quot;姓名：&quot;</span> + acc.getUserName());</span><br><span class="line">    System.out.println(<span class="string">&quot;余额：&quot;</span> + acc.getMoney());</span><br><span class="line">    System.out.println(<span class="string">&quot;当次限额：&quot;</span> + acc.getQuotaMoney());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="用户存款功能实现"><a href="#用户存款功能实现" class="headerlink" title="用户存款功能实现"></a>用户存款功能实现</h2><p><img src="/day09-ATM%E7%B3%BB%E7%BB%9F.assets%5Cimage-20210923105808055.png" alt="image-20210923105808055"></p>
+<p>①存款就是拿到当前账户对象。</p>
+<p>②然后让用户输入存款的金额。</p>
+<p>③调用账户对象的setMoney方法将账户余额修改成存钱后的余额。</p>
+<p>④存钱后需要查询一下账户信息，确认是否存钱成功了！</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">   存钱的</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> acc</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">depositMoney</span><span class="params">(Account acc, Scanner sc)</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;==================存钱操作===================&quot;</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot;请您输入存款的金额：&quot;</span>);</span><br><span class="line">    <span class="type">double</span> <span class="variable">money</span> <span class="operator">=</span> sc.nextDouble();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 直接把金额修改到账户对象的money属性中去</span></span><br><span class="line">    acc.setMoney(acc.getMoney() + money);</span><br><span class="line">    System.out.println(<span class="string">&quot;存款完成！！&quot;</span>);</span><br><span class="line">    showAccount(acc);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="用户取款功能实现"><a href="#用户取款功能实现" class="headerlink" title="用户取款功能实现"></a>用户取款功能实现</h2><p><img src="/day09-ATM%E7%B3%BB%E7%BB%9F.assets%5Cimage-20210923105752508.png" alt="image-20210923105752508"></p>
+<p><strong>取款分析</strong></p>
+<p>①取款需要先判断账户是否有钱。</p>
+<p>②有钱则拿到自己账户对象。</p>
+<p>③然后让用户输入取款金额</p>
+<p>④判断取款金额是否超过了当次限额，以及余额是否足够</p>
+<p>⑤满足要求则调用账户对象的setMoney方法完成金额的修改。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">   取款</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> acc</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> sc</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">drawMoney</span><span class="params">(Account acc, Scanner sc)</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;==================取款操作===================&quot;</span>);</span><br><span class="line">    <span class="comment">// 1、判断它的账户是否足够100元</span></span><br><span class="line">    <span class="keyword">if</span>(acc.getMoney() &gt;= <span class="number">100</span>)&#123;</span><br><span class="line">        <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;请您输入取款的金额：&quot;</span>);</span><br><span class="line">            <span class="type">double</span> <span class="variable">money</span> <span class="operator">=</span> sc.nextDouble();</span><br><span class="line">            <span class="comment">// 2、判断这个金额有没有超过当次限额</span></span><br><span class="line">            <span class="keyword">if</span>(money &gt; acc.getQuotaMoney())&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;您当次取款金额超过每次限额，不要取那么多，每次最多可以取：&quot;</span> + acc.getQuotaMoney());</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">// 3、判断当前余额是否足够你取钱</span></span><br><span class="line">                <span class="keyword">if</span>(acc.getMoney() &gt;= money)&#123;</span><br><span class="line">                    <span class="comment">// 够钱，可以取钱了</span></span><br><span class="line">                    acc.setMoney(acc.getMoney() - money);</span><br><span class="line">                    System.out.println(<span class="string">&quot;恭喜您，取钱&quot;</span> + money + <span class="string">&quot;成功了！当前账户还剩余：&quot;</span> + acc.getMoney());</span><br><span class="line">                    <span class="keyword">return</span>;<span class="comment">// 取钱后干掉取钱方法</span></span><br><span class="line">                &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                    System.out.println(<span class="string">&quot;余额不足啊！&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;您自己的金额没有超过100元，就别取了~~~&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="用户转账功能实现"><a href="#用户转账功能实现" class="headerlink" title="用户转账功能实现"></a>用户转账功能实现</h2><p><img src="/day09-ATM%E7%B3%BB%E7%BB%9F.assets%5Cimage-20210923105917170.png" alt="image-20210923105917170"></p>
+<p><strong>分析</strong></p>
+<p>①转账功能需要判断系统中是否有2个账户对象及以上。</p>
+<p>②同时还要判断自己账户是否有钱。</p>
+<p>③接下来需要输入对方卡号，判断对方账户是否存在。</p>
+<p>④对方账户存在还需要认证对方户主的姓氏。</p>
+<p>⑤满足要求则可以把自己账户对象的金额修改到对方账户对象中去。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  转账功能</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> accounts</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> acc</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> sc</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">transferMoney</span><span class="params">(ArrayList&lt;Account&gt; accounts, Account acc, Scanner sc)</span> &#123;</span><br><span class="line">    <span class="comment">// 1、判断系统中是否有2个账户及以上</span></span><br><span class="line">    <span class="keyword">if</span>(accounts.size() &lt; <span class="number">2</span>)&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;对不起，系统中无其他账户，您不可以转账！&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2、判断自己的账户对象中是否有钱</span></span><br><span class="line">    <span class="keyword">if</span>(acc.getMoney() == <span class="number">0</span>)&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;对不起，您自己都没钱，就别转了~~&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3、开始转账逻辑</span></span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;请您输入对方账户的卡号：&quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">cardId</span> <span class="operator">=</span> sc.next();</span><br><span class="line">        <span class="type">Account</span> <span class="variable">account</span> <span class="operator">=</span> getAccountByCardId(cardId , accounts);</span><br><span class="line">        <span class="comment">// 判断这个账户对象是否存在，存在说明对方卡号输入正确</span></span><br><span class="line">        <span class="keyword">if</span>(account != <span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="comment">// 判断这个账户对象是否是当前登录的账户自己</span></span><br><span class="line">            <span class="keyword">if</span>(account.getCardId().equals(acc.getCardId()))&#123;</span><br><span class="line">                <span class="comment">// 正在给自己转账</span></span><br><span class="line">                System.out.println(<span class="string">&quot;您不可以为自己转账！&quot;</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">// 确认对方的姓氏</span></span><br><span class="line">                <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;*&quot;</span> + account.getUserName().substring(<span class="number">1</span>);</span><br><span class="line">                System.out.print(<span class="string">&quot;请您确认【&quot;</span> + name + <span class="string">&quot;】的姓氏：&quot;</span>);</span><br><span class="line">                <span class="type">String</span> <span class="variable">preName</span> <span class="operator">=</span> sc.next(); <span class="comment">// 王</span></span><br><span class="line">                <span class="comment">// 判断        黑马关之琳</span></span><br><span class="line">                <span class="keyword">if</span>(account.getUserName().startsWith(preName))&#123;</span><br><span class="line">                    <span class="comment">// 真正开始转账了</span></span><br><span class="line">                    System.out.println(<span class="string">&quot;请您输入转账的金额：&quot;</span>);</span><br><span class="line">                    <span class="type">double</span> <span class="variable">money</span> <span class="operator">=</span> sc.nextDouble();</span><br><span class="line">                    <span class="comment">// 判断这个金额是否超过了自己的余额</span></span><br><span class="line">                    <span class="keyword">if</span>(money &gt; acc.getMoney() )&#123;</span><br><span class="line">                        System.out.println(<span class="string">&quot;对不起，您要转账的金额太多，您最多可以转账多少：&quot;</span> + acc.getMoney());</span><br><span class="line">                    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                        <span class="comment">// 真的可以转了</span></span><br><span class="line">                        acc.setMoney(acc.getMoney() - money);</span><br><span class="line">                        account.setMoney(account.getMoney() + money);</span><br><span class="line">                        System.out.println(<span class="string">&quot;恭喜您，转账成功了，已经为&quot;</span> + account.getUserName() +<span class="string">&quot;转账多少：&quot;</span> + money);</span><br><span class="line">                        showAccount(acc);</span><br><span class="line">                        <span class="keyword">return</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                    System.out.println(<span class="string">&quot;对不起，您认证的信息有误~~~&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;对不起，您输入的转账卡号有问题！&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="用户密码修改、销户功能实现"><a href="#用户密码修改、销户功能实现" class="headerlink" title="用户密码修改、销户功能实现"></a>用户密码修改、销户功能实现</h2><p><img src="/day09-ATM%E7%B3%BB%E7%BB%9F.assets%5Cimage-20210923110002057.png" alt="image-20210923110002057"></p>
+<p><strong>分析</strong></p>
+<p>①修改密码就是把当前对象的密码属性使用set方法进行更新。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">updatePassWord</span><span class="params">(Account acc, Scanner sc)</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;===========修改密码=======================&quot;</span>);</span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;请您输入正确的密码：&quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">okPassWord</span> <span class="operator">=</span> sc.next();</span><br><span class="line">        <span class="comment">// 判断密码是否正确</span></span><br><span class="line">        <span class="keyword">if</span>(acc.getPassWord().equals(okPassWord))&#123;</span><br><span class="line">            <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">                <span class="comment">// 可以输入新密码</span></span><br><span class="line">                System.out.println(<span class="string">&quot;请您输入新的密码：&quot;</span>);</span><br><span class="line">                <span class="type">String</span> <span class="variable">newPassWord</span> <span class="operator">=</span> sc.next();</span><br><span class="line"></span><br><span class="line">                System.out.println(<span class="string">&quot;请您输入确认密码：&quot;</span>);</span><br><span class="line">                <span class="type">String</span> <span class="variable">okNewPassWord</span> <span class="operator">=</span> sc.next();</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(newPassWord.equals(okNewPassWord)) &#123;</span><br><span class="line">                    <span class="comment">// 修改账户对象的密码为新密码</span></span><br><span class="line">                    acc.setPassWord(newPassWord);</span><br><span class="line">                    <span class="keyword">return</span>; <span class="comment">// 直接结束掉！！</span></span><br><span class="line">                &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                    System.out.println(<span class="string">&quot;您两次输入的密码不一致~~&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;当前输入的密码不正确~~~&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>②销户是从集合对象中删除当前对象，并回到首页。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="number">7</span>:</span><br><span class="line">    <span class="comment">// 注销账户</span></span><br><span class="line">    <span class="comment">// 从当前集合中抹掉当前账户对象即可</span></span><br><span class="line">    accounts.remove(acc);</span><br><span class="line">    System.out.println(<span class="string">&quot;销户成功了！！&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span>;<span class="comment">// 结束当前操作的方法！</span></span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Gian</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://860418.xyz/2022/04/11/day09-ATM/">http://860418.xyz/2022/04/11/day09-ATM/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2022 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2022/04/11/day08/">API</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Gian | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
