@@ -23,7 +23,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"860418.xyz","root":"/","language":"en"};
-    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"http://img.yaojian.cc/touxiang1.jpg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep running."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"http://img.yaojian.cc/touxiang1.jpg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep running."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
   </script>
 <meta name="generator" content="Hexo 6.1.0"></head>
@@ -424,6 +424,10 @@
     <ul class="tools-list">
         <!-- TOC aside toggle -->
         
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
 
         <!-- go comment -->
         
@@ -477,6 +481,14 @@
     </div>
 
     
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%95%B0%E7%BB%84"><span class="nav-number">1.</span> <span class="nav-text">1.数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E7%BB%84%E3%80%90%E7%90%86%E8%A7%A3%E3%80%91"><span class="nav-number">1.1.</span> <span class="nav-text">1.1什么是数组【理解】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2%E6%95%B0%E7%BB%84%E5%AE%9A%E4%B9%89%E6%A0%BC%E5%BC%8F%E3%80%90%E8%AE%B0%E5%BF%86%E3%80%91"><span class="nav-number">1.2.</span> <span class="nav-text">1.2数组定义格式【记忆】</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1%E7%AC%AC%E4%B8%80%E7%A7%8D"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.2.1第一种</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-2%E7%AC%AC%E4%BA%8C%E7%A7%8D"><span class="nav-number">1.2.2.</span> <span class="nav-text">1.2.2第二种</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3%E6%95%B0%E7%BB%84%E5%8A%A8%E6%80%81%E5%88%9D%E5%A7%8B%E5%8C%96%E3%80%90%E5%BA%94%E7%94%A8%E3%80%91"><span class="nav-number">1.3.</span> <span class="nav-text">1.3数组动态初始化【应用】</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-1%E4%BB%80%E4%B9%88%E6%98%AF%E5%8A%A8%E6%80%81%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.3.1.</span> <span class="nav-text">1.3.1什么是动态初始化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-2%E5%8A%A8%E6%80%81%E5%88%9D%E5%A7%8B%E5%8C%96%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.3.2.</span> <span class="nav-text">1.3.2动态初始化格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-3%E5%8A%A8%E6%80%81%E5%88%9D%E5%A7%8B%E5%8C%96%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3"><span class="nav-number">1.3.3.</span> <span class="nav-text">1.3.3动态初始化格式详解</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E8%AE%BF%E9%97%AE%E3%80%90%E5%BA%94%E7%94%A8%E3%80%91"><span class="nav-number">1.4.</span> <span class="nav-text">1.4数组元素访问【应用】</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-1%E4%BB%80%E4%B9%88%E6%98%AF%E7%B4%A2%E5%BC%95"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.4.1什么是索引</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-2%E8%AE%BF%E9%97%AE%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.4.2.</span> <span class="nav-text">1.4.2访问数组元素格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-3%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81"><span class="nav-number">1.4.3.</span> <span class="nav-text">1.4.3示例代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E3%80%90%E7%90%86%E8%A7%A3%E3%80%91"><span class="nav-number">1.5.</span> <span class="nav-text">1.5内存分配【理解】</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5-1%E5%86%85%E5%AD%98%E6%A6%82%E8%BF%B0"><span class="nav-number">1.5.1.</span> <span class="nav-text">1.5.1内存概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5-2java%E4%B8%AD%E7%9A%84%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D"><span class="nav-number">1.5.2.</span> <span class="nav-text">1.5.2java中的内存分配</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6%E5%8D%95%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E5%86%85%E5%AD%98%E5%9B%BE%E3%80%90%E7%90%86%E8%A7%A3%E3%80%91"><span class="nav-number">1.6.</span> <span class="nav-text">1.6单个数组的内存图【理解】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7%E5%A4%9A%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E5%86%85%E5%AD%98%E5%9B%BE%E3%80%90%E7%90%86%E8%A7%A3%E3%80%91"><span class="nav-number">1.7.</span> <span class="nav-text">1.7多个数组的内存图【理解】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-8%E5%A4%9A%E4%B8%AA%E6%95%B0%E7%BB%84%E6%8C%87%E5%90%91%E7%9B%B8%E5%90%8C%E5%86%85%E5%AD%98%E5%9B%BE%E3%80%90%E7%90%86%E8%A7%A3%E3%80%91"><span class="nav-number">1.8.</span> <span class="nav-text">1.8多个数组指向相同内存图【理解】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-9%E6%95%B0%E7%BB%84%E9%9D%99%E6%80%81%E5%88%9D%E5%A7%8B%E5%8C%96%E3%80%90%E5%BA%94%E7%94%A8%E3%80%91"><span class="nav-number">1.9.</span> <span class="nav-text">1.9数组静态初始化【应用】</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-9-1%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%99%E6%80%81%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.9.1.</span> <span class="nav-text">1.9.1什么是静态初始化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-9-2%E9%9D%99%E6%80%81%E5%88%9D%E5%A7%8B%E5%8C%96%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.9.2.</span> <span class="nav-text">1.9.2静态初始化格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-9-3%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81"><span class="nav-number">1.9.3.</span> <span class="nav-text">1.9.3示例代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-10%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C%E7%9A%84%E4%B8%A4%E4%B8%AA%E5%B8%B8%E8%A7%81%E5%B0%8F%E9%97%AE%E9%A2%98%E3%80%90%E5%BA%94%E7%94%A8%E3%80%91"><span class="nav-number">1.10.</span> <span class="nav-text">1.10数组操作的两个常见小问题【应用】</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-10-1%E7%B4%A2%E5%BC%95%E8%B6%8A%E7%95%8C%E5%BC%82%E5%B8%B8"><span class="nav-number">1.10.1.</span> <span class="nav-text">1.10.1索引越界异常</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-10-2%E7%A9%BA%E6%8C%87%E9%92%88%E5%BC%82%E5%B8%B8"><span class="nav-number">1.10.2.</span> <span class="nav-text">1.10.2空指针异常</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-11%E6%95%B0%E7%BB%84%E9%81%8D%E5%8E%86%E3%80%90%E5%BA%94%E7%94%A8%E3%80%91"><span class="nav-number">1.11.</span> <span class="nav-text">1.11数组遍历【应用】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-12%E6%95%B0%E7%BB%84%E6%9C%80%E5%80%BC%E3%80%90%E5%BA%94%E7%94%A8%E3%80%91"><span class="nav-number">1.12.</span> <span class="nav-text">1.12数组最值【应用】</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
 
     <div class="image-viewer-container">
     <img src="">
@@ -504,10 +516,22 @@
 
 
 
+    
+<script src="/js/code-copy.js"></script>
+
+
 
 
 
 <div class="post-scripts">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
     
 </div>
 

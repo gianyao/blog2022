@@ -23,7 +23,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"860418.xyz","root":"/","language":"en"};
-    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"http://img.yaojian.cc/touxiang1.jpg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep running."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"http://img.yaojian.cc/touxiang1.jpg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep running."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
   </script>
 <meta name="generator" content="Hexo 6.1.0"></head>
@@ -366,6 +366,10 @@
     <ul class="tools-list">
         <!-- TOC aside toggle -->
         
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
 
         <!-- go comment -->
         
@@ -419,6 +423,14 @@
     </div>
 
     
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Debug%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">1.Debug模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1%E4%BB%80%E4%B9%88%E6%98%AFDebug%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">1.1什么是Debug模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2Debug%E6%A8%A1%E5%BC%8F%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="nav-number">1.2.</span> <span class="nav-text">1.2Debug模式操作流程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0%EF%BC%88%E5%8F%82%E8%80%83%E9%A2%98%E7%9B%AE%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">2.基础练习（参考题目）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1%E5%87%8F%E8%82%A5%E8%AE%A1%E5%88%92if%E7%89%88%E6%9C%AC"><span class="nav-number">2.1.</span> <span class="nav-text">2.1减肥计划if版本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1%E6%A1%88%E4%BE%8B%E9%9C%80%E6%B1%82"><span class="nav-number">2.1.1.</span> <span class="nav-text">2.1.1案例需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.1.2代码实现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2%E5%87%8F%E8%82%A5%E8%AE%A1%E5%88%92switch%E7%89%88%E6%9C%AC"><span class="nav-number">2.2.</span> <span class="nav-text">2.2减肥计划switch版本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1%E6%A1%88%E4%BE%8B%E9%9C%80%E6%B1%82"><span class="nav-number">2.2.1.</span> <span class="nav-text">2.2.1案例需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.2.2.</span> <span class="nav-text">2.2.2代码实现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3%E9%80%A2%E4%B8%83%E8%B7%B3%E8%BF%87"><span class="nav-number">2.3.</span> <span class="nav-text">2.3逢七跳过</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-1%E6%A1%88%E4%BE%8B%E9%9C%80%E6%B1%82"><span class="nav-number">2.3.1.</span> <span class="nav-text">2.3.1案例需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-2%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.3.2.</span> <span class="nav-text">2.3.2代码实现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4%E4%B8%8D%E6%AD%BB%E7%A5%9E%E5%85%94"><span class="nav-number">2.4.</span> <span class="nav-text">2.4不死神兔</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-1%E6%A1%88%E4%BE%8B%E9%9C%80%E6%B1%82"><span class="nav-number">2.4.1.</span> <span class="nav-text">2.4.1案例需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-2%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.4.2.</span> <span class="nav-text">2.4.2代码实现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5%E7%99%BE%E9%92%B1%E7%99%BD%E9%B8%A1"><span class="nav-number">2.5.</span> <span class="nav-text">2.5百钱白鸡</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-1%E6%A1%88%E4%BE%8B%E9%9C%80%E6%B1%82"><span class="nav-number">2.5.1.</span> <span class="nav-text">2.5.1案例需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-2%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.5.2.</span> <span class="nav-text">2.5.2代码实现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E6%B1%82%E5%92%8C"><span class="nav-number">2.6.</span> <span class="nav-text">2.6数组元素求和</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-6-1%E6%A1%88%E4%BE%8B%E9%9C%80%E6%B1%82"><span class="nav-number">2.6.1.</span> <span class="nav-text">2.6.1案例需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-6-2%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.6.2.</span> <span class="nav-text">2.6.2代码实现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-7%E5%88%A4%E6%96%AD%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E6%98%AF%E5%90%A6%E7%9B%B8%E5%90%8C"><span class="nav-number">2.7.</span> <span class="nav-text">2.7判断两个数组是否相同</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-7-1%E6%A1%88%E4%BE%8B%E9%9C%80%E6%B1%82"><span class="nav-number">2.7.1.</span> <span class="nav-text">2.7.1案例需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-7-2%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.7.2.</span> <span class="nav-text">2.7.2代码实现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-8%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E5%9C%A8%E6%95%B0%E7%BB%84%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E7%B4%A2%E5%BC%95%E4%BD%8D%E7%BD%AE"><span class="nav-number">2.8.</span> <span class="nav-text">2.8查找元素在数组中出现的索引位置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-8-1%E6%A1%88%E4%BE%8B%E9%9C%80%E6%B1%82"><span class="nav-number">2.8.1.</span> <span class="nav-text">2.8.1案例需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-8-2%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.8.2.</span> <span class="nav-text">2.8.2代码实现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-9%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E5%8F%8D%E8%BD%AC"><span class="nav-number">2.9.</span> <span class="nav-text">2.9数组元素反转</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-9-1%E6%A1%88%E4%BE%8B%E9%9C%80%E6%B1%82"><span class="nav-number">2.9.1.</span> <span class="nav-text">2.9.1案例需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-9-2%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.9.2.</span> <span class="nav-text">2.9.2代码实现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-10%E8%AF%84%E5%A7%94%E6%89%93%E5%88%86"><span class="nav-number">2.10.</span> <span class="nav-text">2.10评委打分</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-10-1%E6%A1%88%E4%BE%8B%E9%9C%80%E6%B1%82"><span class="nav-number">2.10.1.</span> <span class="nav-text">2.10.1案例需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-10-2%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.10.2.</span> <span class="nav-text">2.10.2代码实现</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
 
     <div class="image-viewer-container">
     <img src="">
@@ -446,10 +458,22 @@
 
 
 
+    
+<script src="/js/code-copy.js"></script>
+
+
 
 
 
 <div class="post-scripts">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
     
 </div>
 
