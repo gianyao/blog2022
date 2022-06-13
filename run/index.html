@@ -9,7 +9,7 @@
     
     <title>
         
-            Archive: 2022/5 |
+            链接收藏 |
         
         Gian
     </title>
@@ -67,7 +67,7 @@
                         </li>
                     
                         <li class="menu-item">
-                            <a class="active"
+                            <a class=""
                                href="/archives"
                             >
                                 ARCHIVES
@@ -125,7 +125,7 @@
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active"
+                    <a class=""
                        href="/archives">ARCHIVES</a>
                 </li>
             
@@ -159,137 +159,166 @@
             <div class="main-content">
 
                 
-                    <div class="fade-in-down-animation">
-    <div class="archive-container ">
-        
-<div class="archive-list-container">
-    
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2022</span>
-                <span class="archive-year-post-count">[16]</span>
-            </div>
-            <ul class="article-list">
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/05/17/englishread/"
-                        >阅读理解因果联系</a>
-                        <span class="article-date">05-17</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/04/11/day09-ATM/"
-                        >day09 ATM系统开发</a>
-                        <span class="article-date">04-11</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/04/11/day08/"
-                        >day08 API</a>
-                        <span class="article-date">04-11</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/04/11/day07/"
-                        >day07 类和对象</a>
-                        <span class="article-date">04-11</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/04/11/day06/"
-                        >day06 Debug模式</a>
-                        <span class="article-date">04-11</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/04/11/day05/"
-                        >day05 方法概述</a>
-                        <span class="article-date">04-11</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/04/11/day04/"
-                        >day04 数组</a>
-                        <span class="article-date">04-11</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/04/11/day02/"
-                        >day02 Java基础语法</a>
-                        <span class="article-date">04-11</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/04/11/day03/"
-                        >day03 流程控制语句</a>
-                        <span class="article-date">04-11</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/04/11/day01/"
-                        >day01 java基础语法</a>
-                        <span class="article-date">04-11</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/04/10/lambda/"
-                        >Hello World</a>
-                        <span class="article-date">04-10</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/04/10/Date/"
-                        >Date类</a>
-                        <span class="article-date">04-10</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/04/09/sqlserver/"
-                        >查看数据库信息</a>
-                        <span class="article-date">04-09</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/04/03/hello-world/"
-                        >Hello World</a>
-                        <span class="article-date">04-03</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/04/01/humorous/"
-                        >幽默工具箱</a>
-                        <span class="article-date">04-01</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/03/01/grit/"
-                        >坚毅力表</a>
-                        <span class="article-date">03-01</span>
-                    </li>
-                
-            </ul>
-        </section>
-    
-</div>
+                    $friend-link-item-height = 82px;
+$friend-link-item-height-tablet = 68px;
+$friend-link-item-interval = 16px;
+$friend-link-item-border-radius = 6px;
 
-    </div>
-</div>
+.page-template-container {
+
+  keep-container(false, 0, 0, 30px, 30px);
+
+  .page-template-content {
+    color: var(--default-text-color);
+
+    h1, h2, h3, h4, h5, h6 {
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+    }
+  }
+
+
+  if (hexo-config('menu.Links')) {
+    .friends-link-container {
+
+      .friends-link-list {
+        position: relative;
+
+        .friends-link-item {
+          box-sizing: border-box;
+          position: relative;
+          float: left;
+          width: 50%;
+          cursor: pointer;
+          height: $friend-link-item-height;
+          padding-bottom: $friend-link-item-interval;
+
+          +keep-tablet() {
+            height: $friend-link-item-height-tablet;
+          }
+
+          &:nth-child(odd) {
+            padding-right: $friend-link-item-interval * 0.5;
+          }
+
+          &:nth-child(even) {
+            padding-left: $friend-link-item-interval * 0.5;
+          }
+
+          .content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            box-shadow: 1px 1px 2px var(--shadow-color);
+            border-radius: $friend-link-item-border-radius;
+            padding-left: $friend-link-item-height - $friend-link-item-interval;
+            box-sizing: border-box;
+
+
+            +keep-tablet() {
+              padding-left: $friend-link-item-height-tablet - $friend-link-item-interval;
+            }
+
+            &:hover {
+              box-shadow: 1px 1px 6px var(--shadow-color);
+
+              .info .name {
+                color: var(--primary-color);
+              }
+            }
+
+            .radius {
+              border-top-left-radius: $friend-link-item-border-radius;
+              border-bottom-left-radius: $friend-link-item-border-radius;
+            }
+
+            .avatar {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: $friend-link-item-height  - $friend-link-item-interval;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 2rem;
+              background: var(--second-background-color);
+              color: var(--second-text-color);
+
+
+              +keep-tablet() {
+                width: $friend-link-item-height-tablet  - $friend-link-item-interval;
+              }
+
+              img {
+                box-sizing: border-box;
+                position: relative;
+                width: 100%;
+                height: 100%;
+              }
+            }
+
+
+            .info {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              box-sizing: border-box;
+              padding: 10px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-items: flex-start;
+
+              +keep-tablet() {
+                padding: 6px;
+              }
+
+              .name {
+                width: 100%;
+                height: 60%;
+                font-size: 1.28rem;
+                color: var(--second-text-color);
+
+                +keep-tablet() {
+                  font-size: 1.08rem;
+                }
+              }
+
+              .description {
+                width: 100%;
+                height: 40%;
+                font-size: 1rem;
+                color: var(--third-text-color);
+
+
+                +keep-tablet() {
+                  font-size: 0.98rem;
+                }
+              }
+
+              .ellipsis {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
+
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
 
                 
             </div>
