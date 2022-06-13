@@ -159,165 +159,103 @@
             <div class="main-content">
 
                 
-                    $friend-link-item-height = 82px;
-$friend-link-item-height-tablet = 68px;
-$friend-link-item-interval = 16px;
-$friend-link-item-border-radius = 6px;
+                    <div class="fade-in-down-animation">
+    <div class="page-template-container">
+        
+        
+        <div class="page-template-content markdown-body">
+            
+                <table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">年度目标</th>
+<th align="center">完成</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">取得本科毕业证书和学位证书</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">完成工作调动</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">掌握Python语言</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">掌握Java语言</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">掌握JavaScript语言</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">修炼写作本领</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">取得全国英语等级考试四级证书</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">掌握MySQL语言</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left">熟练掌握吉他弹唱技能</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">掌握浮雕壁画技能</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h3 id="2022年习惯养成"><a href="#2022年习惯养成" class="headerlink" title="2022年习惯养成"></a>2022年习惯养成</h3><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>习惯养成</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>每天坚持早上5点钟起床</td>
+</tr>
+<tr>
+<td>2</td>
+<td>每天阅读1小时</td>
+</tr>
+<tr>
+<td>3</td>
+<td>每周晨跑3次</td>
+</tr>
+<tr>
+<td>4</td>
+<td>…</td>
+</tr>
+</tbody></table>
 
-.page-template-container {
-
-  keep-container(false, 0, 0, 30px, 30px);
-
-  .page-template-content {
-    color: var(--default-text-color);
-
-    h1, h2, h3, h4, h5, h6 {
-
-      &:first-child {
-        margin-top: 0;
-      }
-
-    }
-  }
-
-
-  if (hexo-config('menu.Links')) {
-    .friends-link-container {
-
-      .friends-link-list {
-        position: relative;
-
-        .friends-link-item {
-          box-sizing: border-box;
-          position: relative;
-          float: left;
-          width: 50%;
-          cursor: pointer;
-          height: $friend-link-item-height;
-          padding-bottom: $friend-link-item-interval;
-
-          +keep-tablet() {
-            height: $friend-link-item-height-tablet;
-          }
-
-          &:nth-child(odd) {
-            padding-right: $friend-link-item-interval * 0.5;
-          }
-
-          &:nth-child(even) {
-            padding-left: $friend-link-item-interval * 0.5;
-          }
-
-          .content {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            box-shadow: 1px 1px 2px var(--shadow-color);
-            border-radius: $friend-link-item-border-radius;
-            padding-left: $friend-link-item-height - $friend-link-item-interval;
-            box-sizing: border-box;
-
-
-            +keep-tablet() {
-              padding-left: $friend-link-item-height-tablet - $friend-link-item-interval;
-            }
-
-            &:hover {
-              box-shadow: 1px 1px 6px var(--shadow-color);
-
-              .info .name {
-                color: var(--primary-color);
-              }
-            }
-
-            .radius {
-              border-top-left-radius: $friend-link-item-border-radius;
-              border-bottom-left-radius: $friend-link-item-border-radius;
-            }
-
-            .avatar {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: $friend-link-item-height  - $friend-link-item-interval;
-              height: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              font-size: 2rem;
-              background: var(--second-background-color);
-              color: var(--second-text-color);
-
-
-              +keep-tablet() {
-                width: $friend-link-item-height-tablet  - $friend-link-item-interval;
-              }
-
-              img {
-                box-sizing: border-box;
-                position: relative;
-                width: 100%;
-                height: 100%;
-              }
-            }
-
-
-            .info {
-              position: relative;
-              width: 100%;
-              height: 100%;
-              box-sizing: border-box;
-              padding: 10px;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-items: flex-start;
-
-              +keep-tablet() {
-                padding: 6px;
-              }
-
-              .name {
-                width: 100%;
-                height: 60%;
-                font-size: 1.28rem;
-                color: var(--second-text-color);
-
-                +keep-tablet() {
-                  font-size: 1.08rem;
-                }
-              }
-
-              .description {
-                width: 100%;
-                height: 40%;
-                font-size: 1rem;
-                color: var(--third-text-color);
-
-
-                +keep-tablet() {
-                  font-size: 0.98rem;
-                }
-              }
-
-              .ellipsis {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-              }
-
-            }
-          }
-
-        }
-
-      }
-
-    }
-
-  }
-
-}
+            
+        </div>
+        <div class="page-template-comments">
+            
+        </div>
+    </div>
+</div>
 
 
                 
