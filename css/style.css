@@ -2735,3 +2735,6 @@ pre .javascript .function {
 .markdown-body blockquote {
   margin: 20px 20px;
 }
+.article-copyright-info-container::after {
+  background: #4caf50;
+}
