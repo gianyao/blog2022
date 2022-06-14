@@ -68,7 +68,7 @@
                     
                         <li class="menu-item">
                             <a class=""
-                               href="/categories/English"
+                               href="/categories/%E8%8B%B1%E8%AF%AD"
                             >
                                 英语
                             </a>
@@ -76,7 +76,7 @@
                     
                         <li class="menu-item">
                             <a class=""
-                               href="/categories/Maths"
+                               href="/categories/%E6%95%B0%E5%AD%A6"
                             >
                                 数学
                             </a>
@@ -84,7 +84,7 @@
                     
                         <li class="menu-item">
                             <a class=""
-                               href="/categories/Politics"
+                               href="/categories/%E6%94%BF%E6%B2%BB"
                             >
                                 政治
                             </a>
@@ -92,7 +92,7 @@
                     
                         <li class="menu-item">
                             <a class=""
-                               href="/categories/Professional"
+                               href="/categories/%E4%B8%93%E4%B8%9A%E8%AF%BE"
                             >
                                 专业课
                             </a>
@@ -150,22 +150,22 @@
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/categories/English">英语</a>
+                       href="/categories/%E8%8B%B1%E8%AF%AD">英语</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/categories/Maths">数学</a>
+                       href="/categories/%E6%95%B0%E5%AD%A6">数学</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/categories/Politics">政治</a>
+                       href="/categories/%E6%94%BF%E6%B2%BB">政治</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/categories/Professional">专业课</a>
+                       href="/categories/%E4%B8%93%E4%B8%9A%E8%AF%BE">专业课</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
@@ -535,11 +535,80 @@
 
     
         <aside class="page-aside">
-            <div class="post-toc-wrap">
-    <div class="post-toc">
-        
-    </div>
-</div>
+            .post-toc-wrap {
+  width: 100%;
+  font-size: 0.92rem;
+  box-sizing: border-box;
+
+  .post-toc {
+
+    ol {
+      list-style: none;
+      margin: 0;
+      padding: 0 2px 12px 10px;
+      text-align: left;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      > ol {
+        padding-left: 0;
+      }
+
+      a {
+        transition-property: all;
+        transition();
+      }
+    }
+
+
+    .nav-item {
+      line-height: 1.8;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+
+    .nav {
+      .nav-child {
+        display: hexo-config('toc.expand_all') ? block : none;
+      }
+
+      .active > .nav-child {
+        display: block;
+      }
+
+      .active-current > .nav-child {
+        display: block;
+
+        > .nav-item {
+          display: block;
+        }
+      }
+
+
+      .nav-number, .nav-text {
+        color: var(--default-text-color);
+      }
+
+      .active > a {
+        .nav-number, .nav-text {
+          color: var(--primary-color);
+        }
+      }
+
+      .active-current > a {
+        .nav-number, .nav-text {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+}
+
+
         </aside>
     
 
