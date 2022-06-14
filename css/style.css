@@ -2732,3 +2732,6 @@ pre .javascript .function {
   display: inline-block;
   box-sizing: border-box;
 }
+.markdown-body blockquote {
+  margin: 20px 20px;
+}
